@@ -74,7 +74,7 @@ if( ! class_exists( 'share_info' ) ){
                                 <tr class="<?php echo $i++ % 2 == 0 ? 'alternate' : '' ?>">
                                     <td><?php echo get_bloginfo( 'name' ); ?></td>
                                     <td>
-                                        <textarea style="width: 100%" rows="5" name="share_info[<?php echo $site['blog_id'] ?>]"><?php echo $info[$site['blog_id']] ?></textarea>
+                                        <textarea style="width: 100%" rows="5" name="share_info[<?php echo $site['blog_id'] ?>]"><?php echo $info[$site['blog_id']] ?></textarea><br><em>HTML Allowed</em>
                                     </td>
                                 </tr>
                             <?php
@@ -92,5 +92,6 @@ if( ! class_exists( 'share_info' ) ){
     }
     
     new share_info();
+    include 'share-info-widget/widget.php';
     
 }
